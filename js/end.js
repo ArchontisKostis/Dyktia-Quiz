@@ -6,10 +6,7 @@ const finalQuote = document.getElementById('final-quote');
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
-const MAX_HIGH_SCORES = 5;
-console.log(highScores);
-
-
+const MAX_HIGH_SCORES = 10;
 
 if(mostRecentScore <= 5) {
     finalQuote.innerText = "Μπρο, δεν περνάς με τίποτα... 😢";

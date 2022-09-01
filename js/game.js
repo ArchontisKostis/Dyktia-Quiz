@@ -24,7 +24,6 @@ fetch("js/questions.json")
         return res.json();
     })
     .then(loadedQuestions => {
-        console.log(loadedQuestions);
         questions = loadedQuestions;
         startGame();
     })
@@ -43,8 +42,6 @@ startGame = () => {
     MAX_QUESTIONS = availableQuestions.length;
 
     getNewQuestion();
-    
-    console.log(availableQuestions);
     game.classList.remove("hidden");
     loader.classList.add("hidden");
 };
@@ -63,7 +60,6 @@ getNewQuestion = () => {
     progressBarFull.style.width = progressNumber + '%';
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    console.log('lenght' + availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
 
     question.innerText = currentQuestion.question;
@@ -93,14 +89,10 @@ choices.forEach(choice => {
         }
 
         const correctChoice = document.getElementById(currentQuestion.answer);
-        console.log(correctChoice);
-        //selectedChoice.parentElement.classList.add(classToApply);
         correctChoice.style.backgroundColor = '#28a745'
         selectedChoice.style.backgroundColor = colorToApply;
-        
-        console.log(correctChoice);
+
         setTimeout(() => {
-            //selectedChoice.parentElement.classList.remove(classToApply);
             selectedChoice.style.backgroundColor = '#0f5e68';
             correctChoice.style.backgroundColor = '#0f5e68';
 
