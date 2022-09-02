@@ -91,3 +91,30 @@
         transform: rotate(360deg);
     }
 }
+
+/* RESPONSIVE */
+@media only screen and (max-width: 600px) {
+    h2 {
+        font-size: 2em;
+    } 
+
+    p {
+        font-size: 0.7em;
+    }
+
+    #hud {
+        height: 95px;
+    }
+
+    #progressBar {
+        height: 3.5rem;
+    }
+
+    #progressBarFull {
+        height: 2.9rem;
+    }
+
+    #question {
+        margin-bottom: 1em;
+    }
+}
