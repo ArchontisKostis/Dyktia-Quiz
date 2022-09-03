@@ -14,6 +14,7 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+let wrongQuestions = [];
 
 let questions = [];
 
@@ -82,10 +83,19 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        const colorToApply = selectedAnswer == currentQuestion.answer ? '#28a745' : '#dc3545';
+        // const colorToApply = selectedAnswer == currentQuestion.answer ? '#28a745' : '#dc3545';
+        var colorToApply = "";
 
-        if(colorToApply == '#28a745'){
+        // Check if answer is correct
+        if(selectedAnswer == currentQuestion.answer){
+            colorToApply = '#28a745';
             incrementScore(CORRECT_BONUS);
+
+        }
+        else {
+            colorToApply = '#dc3545';
+            wrongQuestions.push(currentQuestion);
+            window.localStorage.setItem('WrongQuestions', JSON.stringify(wrongQuestions));
         }
 
         const correctChoice = document.getElementById(currentQuestion.answer);
