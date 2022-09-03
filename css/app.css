@@ -88,7 +88,7 @@ h3 {
     font-weight: bold;
     font-size: 1.8rem;
     padding: 1rem 0;
-    width: 20rem;
+    width: 25rem;
     text-align: center;
     border: 0.1rem solid #0f5e68;
     margin-bottom: 1rem;
@@ -212,5 +212,9 @@ label{
 #ansLabel { margin: 1rem 19rem 0.5rem 0rem; }
 #questionLabel { margin: 1rem 11rem 0.5rem 0rem; }
 
-
+#wrong-questions {
+    font-size: 2em;
+    margin-bottom: 2em;
+    color: red;
+}
 
