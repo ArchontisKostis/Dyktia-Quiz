@@ -44,4 +44,11 @@ span {
     transform: translateY(-0.5rem);
 }
 
+/* RESPONSIVE */
+@media only screen and (max-width: 600px) {
+    #delete-questions-btn {
+        width: 25rem;
+    }
+}
+
 
